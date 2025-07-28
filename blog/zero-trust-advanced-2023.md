@@ -1078,4 +1078,4 @@ The platform now provides the security foundation for our edge computing initiat
 
 ---
 
-*Implementing zero-trust security? Let's connect on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) to discuss your security transformation strategy.* 
+*Implementing zero-trust security? Let's connect on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) to discuss your security transformation strategy.* 

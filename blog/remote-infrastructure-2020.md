@@ -1,8 +1,9 @@
 # Remote Infrastructure Management During COVID-19: Lessons from the Frontlines
 
 **Published:** April 30, 2020  
-**Author:** Fernando McKenzie  
-**Tags:** Remote Work, Infrastructure, COVID-19, Monitoring, VPN
+**Author:** Fernando A. McKenzie  
+**Read Time:** 17 minutes  
+**Tags:** Remote Work, Infrastructure, COVID-19, VPN
 
 ## Introduction
 
@@ -537,4 +538,4 @@ The infrastructure we built for remote work didn't just maintain business contin
 
 ---
 
-*Questions about remote infrastructure management? Let's connect on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) to share experiences.* 
+*Questions about remote infrastructure management? Let's connect on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) to share experiences.* 

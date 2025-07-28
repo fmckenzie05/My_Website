@@ -236,6 +236,6 @@ aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceType,S
 
 ---
 
-**Ready to start your AWS migration journey?** Connect with me on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) to discuss strategies and lessons learned.
+**Ready to start your AWS migration journey?** Connect with me on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) to discuss strategies and lessons learned.
 
 *Next post: "Building My Home Lab: Network Segmentation & Monitoring" - Coming December 5th* 

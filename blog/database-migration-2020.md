@@ -905,4 +905,4 @@ The migration experience reinforced that database modernization isn't just about
 
 ---
 
-*Planning a database migration? Let's connect on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) to discuss strategies and lessons learned.* 
+*Planning a database migration? Let's connect on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) to discuss strategies and lessons learned.* 

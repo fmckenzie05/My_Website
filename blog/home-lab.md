@@ -290,6 +290,6 @@ All configuration files, scripts, and documentation available in my [GitHub repo
 
 ---
 
-**Thinking about building your own lab?** Connect with me on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) - I'm happy to share lessons learned and help you avoid common pitfalls.
+**Thinking about building your own lab?** Connect with me on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) - I'm happy to share lessons learned and help you avoid common pitfalls.
 
 *Next post: "Implementing Zero-Trust Architecture in Legacy Supply Chain Systems" - Coming December 15th* 

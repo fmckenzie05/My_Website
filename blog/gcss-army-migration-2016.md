@@ -1,7 +1,7 @@
 # The Great Migration: From PBUSE to GCSS-Army - Lessons from the Frontlines of Military IT Transformation
 
 *Published: October 15, 2016*  
-*Author: Fernando McKenzie*  
+*Author: Fernando A. McKenzie*  
 *Read Time: 14 min*  
 *Tags: Military IT, ERP Systems, Supply Chain, Digital Transformation*
 
@@ -344,4 +344,4 @@ The journey from PBUSE to GCSS-Army continues, but the destination—a modern, i
 
 ---
 
-*Fernando McKenzie is an IT Operations Specialist with extensive experience in military logistics systems and enterprise software deployments. He currently supports GCSS-Army implementation across multiple Army installations.* 
+*Fernando A. McKenzie is an IT Operations Specialist with extensive experience in military logistics systems and enterprise software deployments. He currently supports GCSS-Army implementation across multiple Army installations.* 

@@ -100,6 +100,6 @@ All PowerShell scripts and network configuration templates used in this implemen
 
 ---
 
-**Questions or want to discuss implementation strategies?** Feel free to reach out on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) or via [email](mailto:fernando.mckenzie@email.com).
+**Questions or want to discuss implementation strategies?** Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) or via [email](mailto:fernando.a.mckenzie@live.com).
 
 *Next post: "AWS Migration Strategy: From On-Premise to Cloud-Native" - Coming December 20th* 

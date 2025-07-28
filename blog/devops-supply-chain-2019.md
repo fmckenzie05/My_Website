@@ -563,4 +563,4 @@ The transformation from monthly deployments to daily releases while improving qu
 
 ---
 
-*Interested in DevOps transformation? Let's connect on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) to discuss your challenges.* 
+*Interested in DevOps transformation? Let's connect on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) to discuss your challenges.* 

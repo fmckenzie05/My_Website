@@ -817,4 +817,4 @@ The $1.2M annual savings and 35% reduction in unplanned downtime demonstrated cl
 
 ---
 
-*Implementing predictive maintenance? Let's connect on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) to discuss your ML strategy.* 
+*Implementing predictive maintenance? Let's connect on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) to discuss your ML strategy.* 

@@ -192,4 +192,4 @@ The cloud migration project was challenging but transformative. We not only achi
 
 ---
 
-*Have questions about cloud migration? Connect with me on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) or [email me](mailto:fernando.mckenzie@email.com).* 
+*Have questions about cloud migration? Connect with me on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) or [email me](mailto:fernando.a.mckenzie@live.com).* 

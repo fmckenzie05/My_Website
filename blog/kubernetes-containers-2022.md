@@ -1349,4 +1349,4 @@ The Kubernetes platform now serves as our foundation for innovation, enabling ra
 
 ---
 
-*Planning a Kubernetes migration? Let's connect on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) to discuss your containerization strategy.* 
+*Planning a Kubernetes migration? Let's connect on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) to discuss your containerization strategy.* 

@@ -1,8 +1,9 @@
 # Edge Computing Integration for Real-Time Data Processing: The Next Frontier
 
 **Published:** January 15, 2025  
-**Author:** Fernando McKenzie  
-**Tags:** Edge Computing, Real-Time Processing, IoT, 5G, Distributed Systems
+**Author:** Fernando A. McKenzie  
+**Read Time:** 25 minutes  
+**Tags:** Edge Computing, IoT, Real-Time Processing, 5G Networks
 
 ## Introduction
 
@@ -1171,4 +1172,4 @@ The foundation is now established for the next evolution: autonomous edge networ
 
 ---
 
-*Implementing edge computing in your organization? Let's connect on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) to discuss your distributed computing strategy.* 
+*Implementing edge computing in your organization? Let's connect on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) to discuss your distributed computing strategy.* 

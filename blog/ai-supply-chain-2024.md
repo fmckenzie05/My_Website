@@ -1,8 +1,9 @@
 # AI-Driven Supply Chain Optimization: A Case Study in Intelligent Automation
 
-**Published:** September 25, 2024  
-**Author:** Fernando McKenzie  
-**Tags:** Artificial Intelligence, Supply Chain, Machine Learning, Optimization, LLM
+**Published:** March 15, 2024  
+**Author:** Fernando A. McKenzie  
+**Read Time:** 18 minutes  
+**Tags:** Artificial Intelligence, Supply Chain, Machine Learning, Automation
 
 ## Introduction
 
@@ -1134,4 +1135,4 @@ The foundation is now set for the next evolution: autonomous supply chain networ
 
 ---
 
-*Implementing AI in supply chain? Let's connect on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) to discuss your AI transformation strategy.* 
+*Implementing AI in supply chain? Let's connect on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) to discuss your AI transformation strategy.* 

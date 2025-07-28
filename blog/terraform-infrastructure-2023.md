@@ -1524,4 +1524,4 @@ The IaC foundation now enables rapid innovation while maintaining operational ex
 
 ---
 
-*Implementing Infrastructure as Code? Let's connect on [LinkedIn](https://linkedin.com/in/fernando-mckenzie) to discuss your Terraform strategy.* 
+*Implementing Infrastructure as Code? Let's connect on [LinkedIn](https://www.linkedin.com/in/fernandomckenzie/) to discuss your Terraform strategy.* 

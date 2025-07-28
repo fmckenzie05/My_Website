@@ -1,14 +1,14 @@
-# Fernando McKenzie - Professional Portfolio
+# Fernando A. McKenzie - Professional Portfolio
 
-A modern, responsive portfolio website showcasing my expertise as an IT Operations Specialist with extensive experience in supply chain technology, system administration, and emerging technologies.
+🌐 **Live Demo**: [https://fmckenzie05.github.io/My_Website](https://fmckenzie05.github.io/My_Website)
 
-## 🚀 Live Demo
+---
 
-Visit my portfolio: [https://fmckenzie05.github.io/My_Website](https://fmckenzie05.github.io/My_Website)
+## About
 
-## 👨‍💻 About Me
+Professional portfolio showcasing IT operations expertise, supply chain technology implementations, and emerging tech integration.
 
-**Fernando McKenzie**  
+**Fernando A. McKenzie**  
 *IT Operations Specialist*
 
 - 📧 Email: fernando.a.mckenzie@live.com
