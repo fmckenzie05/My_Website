@@ -1,11 +1,38 @@
-/* Custom CSS for Fernando McKenzie's Portfolio */
+/* Dark Theme Portfolio - Fernando A. McKenzie */
 
 :root {
-    --primary-blue: #1e40af;
-    --primary-green: #10b981;
-    --primary-orange: #f97316;
-    --dark-gray: #1f2937;
-    --light-gray: #f9fafb;
+    /* Dark Theme Color Palette */
+    --bg-primary: #000000;
+    --bg-secondary: #111111;
+    --bg-tertiary: #1a1a1a;
+    --bg-card: #1f1f1f;
+    --bg-nav: rgba(17, 17, 17, 0.95);
+    
+    /* Purple Accents */
+    --purple-primary: #8b5cf6;
+    --purple-secondary: #a855f7;
+    --purple-dark: #7c3aed;
+    --purple-light: #c4b5fd;
+    
+    /* Orange Accents */
+    --orange-primary: #f97316;
+    --orange-secondary: #ea580c;
+    --orange-light: #fb923c;
+    
+    /* Green Accents */
+    --green-primary: #10b981;
+    --green-secondary: #059669;
+    --green-light: #34d399;
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+    --text-accent: var(--purple-light);
+    
+    /* Border Colors */
+    --border-primary: #374151;
+    --border-secondary: #4b5563;
 }
 
 * {
@@ -23,17 +50,22 @@ html {
     }
 }
 
+/* Dark Theme Body */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
 /* Profile Image */
 .profile-image-bg {
     background-image: url('assets/images/profl.PNG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
+    border: 3px solid var(--purple-primary);
 }
 
 /* Custom Animations */
@@ -68,6 +100,15 @@ body {
     }
 }
 
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px var(--purple-primary);
+    }
+    50% {
+        box-shadow: 0 0 30px var(--purple-secondary), 0 0 40px var(--purple-primary);
+    }
+}
+
 .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out;
 }
@@ -80,22 +121,43 @@ body {
     animation: pulse 0.3s ease-in-out;
 }
 
-/* Navigation Enhancements */
+/* Navigation Enhancements - Dark Theme */
 nav {
     transition: all 0.3s ease;
+    background-color: var(--bg-nav);
+    backdrop-filter: blur(10px);
 }
 
 nav.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: var(--bg-nav);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.3);
+    border-bottom: 1px solid var(--border-primary);
 }
 
-/* Hero Section Enhancements */
+/* Hero Section - Dark Theme with Purple/Orange Gradient */
 #hero {
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #3b82f6 50%, #1e40af 75%, #1e3a8a 100%);
+    background: linear-gradient(135deg, 
+        var(--bg-primary) 0%, 
+        #1a0b2e 25%, 
+        #2d1b69 50%, 
+        #1a0b2e 75%, 
+        var(--bg-primary) 100%);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(249, 115, 22, 0.1) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 @keyframes gradientShift {
@@ -104,85 +166,178 @@ nav.scrolled {
     100% { background-position: 0% 50%; }
 }
 
-/* Custom Button Styles */
+/* Custom Button Styles - Dark Theme */
 .btn-primary {
-    background: linear-gradient(135deg, #10b981, #059669);
-    box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.3);
+    background: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
+    box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.4);
     transition: all 0.3s ease;
+    border: 1px solid var(--green-primary);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px 0 rgba(16, 185, 129, 0.4);
+    box-shadow: 0 6px 20px 0 rgba(16, 185, 129, 0.6);
+    animation: glow 2s infinite;
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.3);
+    background: linear-gradient(135deg, var(--orange-primary), var(--orange-secondary));
+    box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.4);
     transition: all 0.3s ease;
+    border: 1px solid var(--orange-primary);
 }
 
 .btn-secondary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px 0 rgba(249, 115, 22, 0.4);
+    box-shadow: 0 6px 20px 0 rgba(249, 115, 22, 0.6);
 }
 
-/* Card Hover Effects */
+/* Card Hover Effects - Dark Theme */
 .card-hover {
     transition: all 0.3s ease;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-primary);
 }
 
 .card-hover:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    border-color: var(--purple-primary);
 }
 
-/* Progress Bar Animations */
+/* Progress Bar Animations - Dark Theme */
 .progress-bar {
     transition: width 1s ease-in-out;
+    background: linear-gradient(90deg, var(--purple-primary), var(--orange-primary));
 }
 
 /* Section Spacing */
 section {
     scroll-margin-top: 80px;
+    background-color: var(--bg-primary);
 }
 
-/* Mobile Menu */
+/* Mobile Menu - Dark Theme */
 .mobile-menu {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    background-color: var(--bg-secondary);
+    border-left: 2px solid var(--purple-primary);
 }
 
 .mobile-menu.active {
     transform: translateX(0);
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Dark Theme */
 ::-webkit-scrollbar {
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
+    background: var(--purple-primary);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    background: var(--purple-secondary);
 }
 
-/* Form Enhancements */
+/* Form Enhancements - Dark Theme */
 .form-input {
     transition: all 0.3s ease;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-primary);
+    color: var(--text-primary);
 }
 
 .form-input:focus {
     transform: scale(1.02);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+    border-color: var(--purple-primary);
+}
+
+.form-input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Dark Theme Text Overrides */
+.text-gray-900 { color: var(--text-primary) !important; }
+.text-gray-800 { color: var(--text-secondary) !important; }
+.text-gray-700 { color: var(--text-secondary) !important; }
+.text-gray-600 { color: var(--text-muted) !important; }
+.text-gray-500 { color: var(--text-muted) !important; }
+
+/* Dark Theme Background Overrides */
+.bg-white { background-color: var(--bg-card) !important; }
+.bg-gray-50 { background-color: var(--bg-secondary) !important; }
+.bg-gray-100 { background-color: var(--bg-tertiary) !important; }
+
+/* Navigation Link Styles */
+nav a {
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--purple-light);
+}
+
+nav a.active {
+    color: var(--orange-primary);
+    font-weight: 600;
+}
+
+/* Skill Tags - Dark Theme Colors */
+.bg-blue-100 { background-color: rgba(139, 92, 246, 0.2) !important; }
+.text-blue-800 { color: var(--purple-light) !important; }
+
+.bg-green-100 { background-color: rgba(16, 185, 129, 0.2) !important; }
+.text-green-800 { color: var(--green-light) !important; }
+
+.bg-orange-100 { background-color: rgba(249, 115, 22, 0.2) !important; }
+.text-orange-800 { color: var(--orange-light) !important; }
+
+.bg-purple-100 { background-color: rgba(139, 92, 246, 0.2) !important; }
+.text-purple-800 { color: var(--purple-light) !important; }
+
+.bg-red-100 { background-color: rgba(239, 68, 68, 0.2) !important; }
+.text-red-800 { color: #fca5a5 !important; }
+
+.bg-yellow-100 { background-color: rgba(245, 158, 11, 0.2) !important; }
+.text-yellow-800 { color: #fcd34d !important; }
+
+.bg-indigo-100 { background-color: rgba(99, 102, 241, 0.2) !important; }
+.text-indigo-800 { color: #c7d2fe !important; }
+
+.bg-pink-100 { background-color: rgba(236, 72, 153, 0.2) !important; }
+.text-pink-800 { color: #f9a8d4 !important; }
+
+.bg-teal-100 { background-color: rgba(20, 184, 166, 0.2) !important; }
+.text-teal-800 { color: #5eead4 !important; }
+
+.bg-gray-100 { background-color: rgba(107, 114, 128, 0.2) !important; }
+.text-gray-800 { color: var(--text-secondary) !important; }
+
+/* Border Colors - Dark Theme */
+.border-gray-300 { border-color: var(--border-primary) !important; }
+.border-gray-200 { border-color: var(--border-secondary) !important; }
+
+/* Special Effects */
+.glow-purple {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.glow-orange {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+}
+
+.glow-green {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
 }
 
 /* Responsive Design Enhancements */
@@ -198,15 +353,22 @@ section {
     }
 }
 
-/* Accessibility Enhancements */
+/* Accessibility Enhancements - Dark Theme */
 .focus-visible:focus {
-    outline: 2px solid #3b82f6;
+    outline: 2px solid var(--purple-primary);
     outline-offset: 2px;
 }
 
-/* Custom Utilities */
+/* Custom Utilities - Dark Theme */
 .text-gradient {
-    background: linear-gradient(135deg, #3b82f6, #10b981);
+    background: linear-gradient(135deg, var(--purple-primary), var(--orange-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-green {
+    background: linear-gradient(135deg, var(--green-primary), var(--green-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -214,4 +376,10 @@ section {
 
 .font-inter {
     font-family: 'Inter', sans-serif;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-primary);
 } 
