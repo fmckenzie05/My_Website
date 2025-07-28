@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticating... | BuildToEarn.dev</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css?v=20250127-1900-dark">
+</head>
+<body class="bg-gray-50 font-inter">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="text-center">
+            <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+                <i class="fas fa-hammer text-white text-2xl"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">Authenticating...</h1>
+            <p class="text-gray-600 mb-4">Please wait while we log you into BuildToEarn.dev</p>
+            <div class="flex justify-center">
+                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth0 SPA SDK -->
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    
+    <script>
+        // Auth0 Configuration (same as main page)
+        const auth0Config = {
+            domain: 'YOUR_AUTH0_DOMAIN', // Replace with your Auth0 domain
+            clientId: 'YOUR_AUTH0_CLIENT_ID', // Replace with your Client ID
+            authorizationParams: {
+                redirect_uri: window.location.origin + '/callback.html'
+            }
+        };
+
+        // Handle the callback
+        const handleCallback = async () => {
+            try {
+                const auth0Client = await auth0.createAuth0Client(auth0Config);
+                
+                // Process the callback
+                await auth0Client.handleRedirectCallback();
+                
+                // Redirect to main page
+                window.location.href = '/';
+            } catch (error) {
+                console.error('Callback error:', error);
+                // Redirect to main page on error
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+            }
+        };
+
+        // Initialize callback handling when page loads
+        document.addEventListener('DOMContentLoaded', handleCallback);
+    </script>
+</body>
+</html> 
