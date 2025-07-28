@@ -82,22 +82,6 @@ function initializeNavigation() {
   const nav = document.querySelector("nav");
   const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
-  // Throttled navbar scroll effect
-  let navTicking = false;
-  window.addEventListener("scroll", () => {
-    if (!navTicking) {
-      requestAnimationFrame(() => {
-        if (window.scrollY > 100) {
-          nav.classList.add("scrolled");
-        } else {
-          nav.classList.remove("scrolled");
-        }
-        navTicking = false;
-      });
-      navTicking = true;
-    }
-  });
-
   // Smooth scrolling for navigation links
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
@@ -120,15 +104,46 @@ function initializeNavigation() {
     });
   });
 
-  // Throttled active nav link updates
-  let navUpdateTicking = false;
+  // Optimized single scroll handler for all scroll effects
+  let scrollTicking = false;
   window.addEventListener("scroll", () => {
-    if (!navUpdateTicking) {
+    if (!scrollTicking) {
       requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+
+        // Navbar scroll effect
+        if (scrollY > 100) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+
+        // Update active nav links
         updateActiveNavLinkOnScroll();
-        navUpdateTicking = false;
+
+        // Update progress bar
+        if (window.scrollProgressBar) {
+          const scrolled =
+            (scrollY /
+              (document.documentElement.scrollHeight - window.innerHeight)) *
+            100;
+          window.scrollProgressBar.style.width = `${Math.min(scrolled, 100)}%`;
+        }
+
+        // Update back to top button
+        if (window.backToTopButton) {
+          if (scrollY > 500) {
+            window.backToTopButton.style.opacity = "1";
+            window.backToTopButton.style.pointerEvents = "auto";
+          } else {
+            window.backToTopButton.style.opacity = "0";
+            window.backToTopButton.style.pointerEvents = "none";
+          }
+        }
+
+        scrollTicking = false;
       });
-      navUpdateTicking = true;
+      scrollTicking = true;
     }
   });
 }
@@ -338,25 +353,7 @@ function closeMobileMenu() {
 
 // Scroll Effects
 function initializeScrollEffects() {
-  // Throttled parallax effect for hero section (improved performance)
-  let ticking = false;
-  const parallaxHandler = () => {
-    const scrolled = window.pageYOffset;
-    const parallax = document.querySelector("#hero");
-    if (parallax && scrolled < window.innerHeight) {
-      const speed = scrolled * 0.3; // Reduced intensity
-      parallax.style.transform = `translateY(${speed}px)`;
-    }
-    ticking = false;
-  };
-
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      requestAnimationFrame(parallaxHandler);
-      ticking = true;
-    }
-  });
-
+  // Simplified scroll effects - removed parallax for better performance
   // Progress indicator
   createScrollProgressIndicator();
 
@@ -372,21 +369,8 @@ function createScrollProgressIndicator() {
   progressBar.style.transformOrigin = "left";
   document.body.appendChild(progressBar);
 
-  // Throttled progress bar update
-  let progressTicking = false;
-  window.addEventListener("scroll", () => {
-    if (!progressTicking) {
-      requestAnimationFrame(() => {
-        const scrolled =
-          (window.scrollY /
-            (document.documentElement.scrollHeight - window.innerHeight)) *
-          100;
-        progressBar.style.width = `${Math.min(scrolled, 100)}%`;
-        progressTicking = false;
-      });
-      progressTicking = true;
-    }
-  });
+  // Add to the main scroll handler instead of creating a separate one
+  window.scrollProgressBar = progressBar;
 }
 
 function createBackToTopButton() {
@@ -398,23 +382,8 @@ function createBackToTopButton() {
 
   document.body.appendChild(backToTop);
 
-  // Throttled back to top button visibility
-  let backToTopTicking = false;
-  window.addEventListener("scroll", () => {
-    if (!backToTopTicking) {
-      requestAnimationFrame(() => {
-        if (window.scrollY > 500) {
-          backToTop.style.opacity = "1";
-          backToTop.style.pointerEvents = "auto";
-        } else {
-          backToTop.style.opacity = "0";
-          backToTop.style.pointerEvents = "none";
-        }
-        backToTopTicking = false;
-      });
-      backToTopTicking = true;
-    }
-  });
+  // Add to the main scroll handler instead of creating a separate one
+  window.backToTopButton = backToTop;
 
   backToTop.addEventListener("click", () => {
     window.scrollTo({
